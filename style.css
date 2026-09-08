@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Space+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  overflow-y: scroll; /* scrolling enabled */
+  -ms-overflow-style: none; /* IE/old Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+nav ul li i {
+  font-size: 1.2rem;
+}
+
+main {
+  text-align: center;
+  position: relative;
+  top: 20%;
+}
+
+.tagline {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 8rem);
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+#wave {
+  display: block;
+  margin: 1rem auto;
+  width: 100%;
+  height: 200px;
+}
+
+.subtext {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 1024px) {
+  header {
+    padding: 1.5rem 2rem;
+  }
+  nav ul {
+    gap: 1.5rem;
+  }
+  .title {
+    font-size: clamp(2rem, 10vw, 6rem);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  main {
+    top: 15%;
+  }
+  .subtext, .scroll {
+    position: static;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  #wave {
+    bottom: 20%;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .title {
+    font-size: clamp(1.8rem, 12vw, 4rem);
+  }
+  .subtext {
+    font-size: 0.7rem;
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+  .scroll {
+    font-size: 0.7rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 100vh;
+  padding: 5rem 3rem;
+  color: #fff;
+}
+/* 🎨 About Studio Section */
+#studio {
+  padding: 8rem 3rem;
+  text-align: center;
+  background: linear-gradient(180deg, #000 0%, #111 100%);
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+/* 🏷️ Heading Style */
+#studio h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* ✨ Decorative underline accent */
+#studio h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #fff;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* 📝 Text Styling */
+.about-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #aaa;
+  max-width: 800px;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  animation: fadeInUp 1.2s ease both;
+}
+
+/* 🎬 Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#work h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+#work h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #fff;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+#work {
+  padding: 8rem 3rem;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+#work h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+#work h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #fff;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.work-card {
+  background: #222;
+  padding: 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-10px);
+  background: #333;
+}
+
+.work-card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.work-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.work-card p {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+html {
+  scroll-behavior: smooth;
+}
+.work-card {
+  cursor: pointer;
+}
+.cta-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #00aced, #0077b5); /* gradient for depth */
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.work-card:hover .cta-btn {
+  background: linear-gradient(135deg, #0077b5, #005f8d);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
